@@ -62,8 +62,8 @@ section::after{
     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
 .container .card:hover{
-    
     transform: translateY(-60px); 
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
 }
 .container .card .content{
     position: relative;
@@ -127,4 +127,5 @@ section::after{
     transform: translateY(-50px);
     transition-delay: calc(0.1s * var(--i) );
     opacity: 1;
+    color: #FAC11A;
 }
