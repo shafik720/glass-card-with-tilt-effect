@@ -4,9 +4,7 @@
     padding: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-img{
-    width: 80%;
-}
+
 body{
     min-height: 100vh;
     display: flex;
@@ -18,7 +16,8 @@ section{
     position: relative;
     margin: 50px;
     width: 100%;
-    background: linear-gradient(45deg,#f8997d,#ad336d);
+    background: linear-gradient(45deg,#52796F,#2F3E46);
+    border-radius: 25px;
 }
 section::before{
     position: absolute;
@@ -28,12 +27,12 @@ section::before{
     left: 0;
     bottom: 0;
     right: 0;
-    clip-path: circle(30% at right 70%);
+    clip-path: circle(20% at right 70%);
 }
 section::after{
     position: absolute;
     content: ' ';
-    background: linear-gradient(#0070B2,#23A8F2);
+    background: linear-gradient(#f8997d,#ad336d);
     top: 0;
     left: 0;
     bottom: 0;  
@@ -50,5 +49,77 @@ section::after{
 }
 .container .card{
     width: 320px;
-    height: 400px;
+    height: 500px;
+    position: relative;
+    background: rgba(11, 151, 226, 0.253);
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+.container .card:hover{
+    
+    transform: translateY(-60px); 
+}
+.container .card .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    opacity: 1;   
+}
+.container .card .content .contentImg{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 50%;
+}
+.container .card .content .contentImg img{
+    width: 100%;
+}
+.container .card .content .contentImg img:first-child{
+    background: white;
+}
+.container .card .content .contentText h2{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30px;    
+}
+.container .card .content .contentText h2 span{
+    text-transform: initial;
+    font-weight: 200;
+    font-size: 0.8em;
+    margin-top: 20px;
+    display: inline-block;
+}
+.container .card  .icons{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+}
+.container .card  .icons li{
+    list-style: none;
+    margin: 0 20px;
+    color: black;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+.container .card:hover  .icons li{
+    transform: translateY(-50px);
+    transition-delay: calc(0.1s * var(--i) );
+    opacity: 1;
 }
