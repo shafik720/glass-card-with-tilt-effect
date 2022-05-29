@@ -50,7 +50,7 @@ section::after{
 }
 .container .card{
     width: 320px;
-    height: 500px;
+    height: 450px;
     position: relative;
     background: rgba(11, 151, 226, 0.253);
     margin: 20px;
