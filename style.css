@@ -75,6 +75,7 @@ section::after{
     padding: 10px;
     opacity: 0.5;
     transition: 0.5s;
+    pointer-events: none;
 }
 .container .card:hover .content{
     opacity: 1;   
