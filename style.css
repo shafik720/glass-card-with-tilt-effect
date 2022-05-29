@@ -1,0 +1,54 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    width: 80%;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section{
+    position: relative;
+    margin: 50px;
+    width: 100%;
+    background: linear-gradient(45deg,#f8997d,#ad336d);
+}
+section::before{
+    position: absolute;
+    content: ' ';
+    background: linear-gradient(#6eee87,#5fc52e);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    clip-path: circle(30% at right 70%);
+}
+section::after{
+    position: absolute;
+    content: ' ';
+    background: linear-gradient(#0070B2,#23A8F2);
+    top: 0;
+    left: 0;
+    bottom: 0;  
+    right: 0;
+    clip-path: circle(20% at 10% 10%);
+}
+.container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card{
+    width: 320px;
+    height: 400px;
+}
